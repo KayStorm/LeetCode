@@ -29,6 +29,8 @@
 
 # 1 <= num, t <= 50
 
+
+
 class Solution(object):
     def theMaximumAchievableX(self, num, t):
         """
