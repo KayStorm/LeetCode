@@ -29,7 +29,7 @@
 
 # 1 <= num, t <= 50
 
-
+# My explanation: So t is the number of turns to modfy num. x is the result of the modification. 
 
 class Solution(object):
     def theMaximumAchievableX(self, num, t):
