@@ -30,3 +30,19 @@
 #         self.right = right
 class Solution:
     def sumOfLeftLeaves(self, root: Optional[TreeNode]) -> int:
+        def isLeaf(node):
+            return node and not node.left and not node.right
+        
+        def traverse(node):
+            if not node:
+                return 0
+            
+            left_sum = traverse(node.left) if node.left else 0
+            right_sum = traverse(node.right) if node.right else 0
+            
+            if isLeaf(node.left):
+                return node.left.val + left_sum + right_sum
+            else:
+                return left_sum + right_sum
+        
+        return traverse(root)
